@@ -1,0 +1,1 @@
+This is a SpringMVC sample of Chapter 5 in book Spring in Action 4th
