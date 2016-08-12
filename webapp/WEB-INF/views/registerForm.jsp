@@ -12,7 +12,7 @@
 	<!-- 
 	.ceshi {font-size:14px; color:#FF0000;}/*这里是设置CSS的样式内容*/ 
 	--> 
-	span.errors {
+	span.error {
 		color: red;
 	}
 	div.errors {
@@ -24,13 +24,13 @@
 <body>
   <h1>Register</h1>
   <sf:form method="POST" commandName="spitter">
-  	<sf:errors path="*" element="div" cssClass="errors" />
-		First Name: <sf:input path="firstName" /><br/>		
-		Last Name: <sf:input path="lastName" /><br/>
-		Email: <sf:input path="email" /><br/>
-		Username: <sf:input path="username" /><br/>
-		Password: <sf:password path="password" /><br/>
+		First Name: <sf:input path="firstName" /> <sf:errors path="firstName"  cssClass="error" /><br/>		
+		Last Name: <sf:input path="lastName" /> <sf:errors path="lastName"  cssClass="error" /><br/>
+		Email: <sf:input path="email" /> <sf:errors path="email"  cssClass="error" /><br/>
+		Username: <sf:input path="username" /> <sf:errors path="username"  cssClass="error" /><br/>
+		Password: <sf:password path="password" /> <sf:errors path="password"  cssClass="error" /><br/>
 		<input type="submit" value="Register" />
+		<input type="button" value="Return" onclick="javascript:window.location.href ='<c:url value="/"/>';">
    </sf:form>
   
   <!-- 
